@@ -1,6 +1,7 @@
 import React from "react";
 import { motion, useViewportScroll, useTransform } from "framer-motion";
 import { Box, useDisclosure, Button, Modal, ModalOverlay, ModalHeader, ModalCloseButton, ModalBody, ModalContent } from "@chakra-ui/react";
+import {InfoOutlineIcon} from "@chakra-ui/icons";
 
 function App() {
     const { scrollYProgress } = useViewportScroll();
@@ -11,7 +12,7 @@ function App() {
     return (
         <>
             <main className={"p-5 bg-sky-600 text-white overflow-hidden"}>
-                <Button onClick={onOpen}>How was this made?</Button>
+                <Button onClick={onOpen}><InfoOutlineIcon/> </Button>
                 <Modal isOpen={isOpen} onClose={onClose}>
                     <ModalOverlay />
                     <ModalContent>
