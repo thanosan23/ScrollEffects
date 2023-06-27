@@ -12,12 +12,12 @@ function App() {
     return (
         <>
             <main className={"p-5 bg-sky-600 text-white overflow-hidden"}>
-                <Button onClick={onOpen}><InfoOutlineIcon/> </Button>
+                <Button id={"infoButton"} onClick={onOpen}><InfoOutlineIcon/> </Button>
                 <Modal isOpen={isOpen} onClose={onClose}>
                     <ModalOverlay />
                     <ModalContent>
                         <ModalHeader>Languages/Frameworks Used</ModalHeader>
-                        <ModalCloseButton />
+                        <ModalCloseButton id={"closeButton"}/>
                         <ModalBody pb={5}>
                             The UI was created using React, ChakraUI, TailwindCSS, and Vite. The animations was created using Framer Motion.
                         </ModalBody>
